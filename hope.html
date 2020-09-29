@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <script type="text/javascript">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="option">WORK</div>
+        <div class="option">CONTACT</div>
+        <div class="option">ABOUT</div>
+    </div>
+    <div class="nav-bar">
+        <a href="index.html" class="site-title">JONATHAN DINETZ</a>
+        <div class="hamburger">
+            <div class="desktop-nav">WORK</div>
+            <div class="desktop-nav">CONTACT</div>
+            <div class="desktop-nav">ABOUT</div>
+            <div id="top" class="menu-button-top"></div>
+            <div id="bottom" class="menu-button-bottom"></div>
+            <div id="trigger1" class="menu-button-trigger"
+                onclick=" changeloc('top'),  changeloctwo('bottom'), changeangle('top'), changeangletwo('bottom'), changevisiblity('trigger1'), changevisiblitytwo('trigger2'), bringitondown('mobile-menu');">
+            </div>
+
+            <div id="trigger2" class="menu-button-trigger"
+                onclick="changelocback('top'),  changeloctwoback('bottom'), changeangleback('top'), changeangletwoback('bottom'), changevisiblitytwo('trigger1'), changevisiblity('trigger2'), bringitonup('mobile-menu');">
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="top-spacer"></div>
+
+        <video playsinline="" autoplay="" muted="" loop="" class="height-strict">
+            <source src="images/Comp 7.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <img class="height-strict" src="images/web materials-11 copy.png">
+
+        <img class="height-strict" src="images/web materials-18.png">
+
+        <video playsinline="" autoplay="" muted="" loop="" class="height-strict">
+            <source src="images/sanding.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <img class="height-strict" src="images/web materials-41 copy.png">
+
+    </div>
+    <div id="container" class="info-bar">
+        <div onclick="changepos('container'), changepos('container2');" class="info-title">PROJECT INFO</div>
+        <div onclick="changeposback('container'), changeposback('container2');" class="open">X</div>
+    </div>
+    <div id="container2" class="info-block">
+
+        <div class="talkie-container">
+            <div class="talkie">Overview
+                <br><br>
+
+                Piedmont for Oakland Public Schools (POPS) is a non profit organization founded by a group of friends
+                and I home from school during the summer of 2020. The organization is dedicated to addressing the
+                educational inequities between my white and wealthy home town of Piedmont, and its underserved next door
+                neighbor, Oakland. We have run two campaigns that have raised a total of $85,000 for educational equity
+                in Oakland.
+                <br><br>
+
+                Challenge
+                <br><br>
+
+                Piedmont is unique in that it is a wealthy town but also majority democrat. This combination of wealth
+                and liberal politics presents an opportunity to provide significant funding to campaigns for racial
+                justice and racial equity.
+                <br><br>
+
+                To capitalize on this opportunity we had to delve into unfamiliar territory. In order to gain the trust
+                of the largest donors in our community, people that ran companies, law firms and the like, we couldn’t
+                just build a go fund me. We had to develop an identity that made us look like more than five teenagers
+                doing something they had never done before.
+                <br><br>
+
+                Solution
+                <br><br>
+
+                For starters we built a full-scale website. The site features a leaderboard which is intended to
+                capitalize on the competitive nature of our small community. If Ted and Mary see that Hank and Julie
+                donated X amount, they might be inclined to out do them. We were also sure to include detailed
+                descriptions of what the funds would be going toward as this is often the main concern of donors to any
+                organization.
+                <br><br>
+
+                Social Media was very important for establishing our presence in the community as we had very little
+                opportunity for in person communication during lockdown. We wanted to break through the clutter of
+                instagram and our simple strategy was to make every post yellow. We eventually established ourselves as
+                “the yellow account” in our follower’s feeds.
+                <br><br>
+
+                Finally, we experimented with other methods of communication and outreach including a small poster
+                campaign promoting an up-coming event. Aimed at morning walkers, the goal was to build awareness by
+                using quick and vivid lines comparing experiences of oakland and piedmont students during the pandemic.
+                <br>&nbsp
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function changepos(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.75s ease-in-out 0s"
+            elem.style.transform = 'translateY( calc(-100vh + 140px))';
+        }
+
+        function changeposback(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.75s ease-in-out 0s"
+            elem.style.transform = 'translateY(0px)';
+        }
+
+        function changeangle(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.1s ease-in-out 0s"
+            elem.style.transform = 'rotateZ(45deg)';
+        }
+
+        function changeangleback(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.1s ease-in-out 0s"
+            elem.style.transform = 'rotateZ(0)';
+        }
+
+        function changeloc(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.25s ease-in-out 0s"
+            elem.style.top = '31px';
+        }
+
+        function changelocback(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.25s ease-in-out 1s"
+            elem.style.top = '27px';
+        }
+
+        function changeangletwo(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.1s ease-in-out 0s"
+            elem.style.transform = 'rotateZ(-45deg)';
+        }
+
+        function changeangletwoback(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.1s ease-in-out 0s"
+            elem.style.transform = 'rotateZ(0)';
+        }
+
+
+        function changeloctwo(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.25s ease-in-out 0s"
+            elem.style.top = '31px';
+        }
+
+        function changeloctwoback(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.25s ease-in-out 1s"
+            elem.style.top = '35px';
+        }
+
+        function changevisiblity(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "visibility 0.25s ease-in-out 0s"
+            elem.style.visibility = 'hidden';
+        }
+
+        function changevisiblitytwo(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "visibility 0.25s ease-in-out 0s"
+            elem.style.visibility = 'visible';
+        }
+
+        function bringitondown(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "top 0.55s ease-in-out 0s"
+            elem.style.top = '70px';
+        }
+
+        function bringitonup(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "top 0.55s ease-in-out 0s"
+            elem.style.top = 'calc(-100vh + 70px)';
+        }
+
+
+    </script>
+
+</body>
+
+</html>
