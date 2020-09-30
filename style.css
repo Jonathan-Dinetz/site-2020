@@ -1,7 +1,6 @@
 body {
     margin:0;
     padding: 0;
-    cursor: url('images/polyblack.png'), auto;
 }
 
 .nav-bar {
@@ -26,7 +25,22 @@ body {
     z-index: 55;
    }
 
-   .info-block{
+.info-trigger{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    opacity: 50%;
+    align-items: center;
+    z-index: 55;
+}
+
+#info-trigger2 {
+    visibility: hidden;
+}
+
+
+
+.info-block{
     display: flex;
     position: fixed;
     top:calc(100vh - 70px);
@@ -72,16 +86,21 @@ body {
     left: 17px;
     font-size: 30px;
     color: black;
-    font-family: acumin-pro, sans-serif;
+    font-family: helvetica, sans-serif;
     font-weight: 700;
-    font-style: normal;
-    transition: color 200ms ease-in-out;
 }
 
-.site-title:hover{
-  color: grey
+.home {
+    display: flex;
+    position: fixed;
+    top:0;
+    width: 320px;
+    height: 70px;
+    background:none;
+    opacity: 50%;
+    align-items: center;
+    z-index: 5;
 }
-
 
 .info-title{
     display: flex;
@@ -120,9 +139,14 @@ body {
     font-family: acumin-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    
+    background: none;
 }
 
+.arrow{
+    height: 35px;
+    position: relative;
+    background: none;
+}
 
 .image-container {
     display: flex;
@@ -186,7 +210,6 @@ a {
 
 .menu-button-bottom {
     visibility: hidden;
-
     display: flex;
     position: fixed;
     top: 35px;
@@ -240,6 +263,9 @@ a {
 
 @media only screen and (max-width: 875px) {
     
+    .arrow{
+        height: 25px;
+    }
 
     .top-spacer{
         height: 10vh;
@@ -283,6 +309,7 @@ a {
     .site-title{
         left: 10px;
         font-size: 22px;
+        background: none;
     }
        .info-title{
         left: 13px;

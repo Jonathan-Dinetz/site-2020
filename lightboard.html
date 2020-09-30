@@ -22,7 +22,8 @@
         <div class="option">ABOUT</div>
     </div>
     <div class="nav-bar">
-        <a href="index.html" class="site-title">JONATHAN DINETZ</a>
+        <a href="index.html" class="home"></a>
+        <div class="site-title">JONATHAN DINETZ</div>
         <div class="hamburger">
             <div class="desktop-nav">WORK</div>
             <div class="desktop-nav">CONTACT</div>
@@ -60,14 +61,23 @@
 
     </div>
 
+    </div>
     <div id="container" class="info-bar">
-        <div onclick="changepos('container'), changepos('container2');" class="info-title">PROJECT INFO</div>
-        <div onclick="changeposback('container'), changeposback('container2');" class="open">X</div>
+        <div id="info-trigger"
+            onclick="changepos('container'), changepos('container2'), changevisiblity('info-trigger'), changevisiblitytwo('info-trigger2'), transformopen('open'), opacityup('talkie');"
+            class="info-trigger"></div>
+        <div id="info-trigger2"
+            onclick="changeposback('container'), changeposback('container2'), changevisiblity('info-trigger2'), changevisiblitytwo('info-trigger'), transformopenback('open'), opacitydown('talkie');"
+            class="info-trigger">
+        </div>
+        <div class="info-title">PROJECT INFO</div>
+        <div id="open" class="open"><img class="arrow" src="images/arrow-02.png"></div>
+
+
     </div>
     <div id="container2" class="info-block">
-
         <div class="talkie-container">
-            <div class="talkie">Overview
+            <div id="talkie" class="talkie">Overview
                 <br><br>
 
                 Piedmont for Oakland Public Schools (POPS) is a non profit organization founded by a group of friends
@@ -210,7 +220,31 @@
             elem.style.top = 'calc(-100vh + 70px)';
         }
 
+        function transformopen(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.75s ease-in-out 0s"
+            elem.style.transform = 'rotateZ(900deg)';
+        }
+
+        function transformopenback(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "transform 0.75s ease-in-out 0s"
+            elem.style.transform = 'rotateZ(0deg)';
+        }
+
+        function opacityup(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "opacity 0.5s ease-in 0.25s"
+            elem.style.opacity = '100%';
+        }
+
+        function opacitydown(el) {
+            var elem = document.getElementById(el);
+            elem.style.transition = "opacity 0.5s ease-in 0s"
+            elem.style.opacity = '0%';
+        }
     </script>
+
 
 </body>
 
