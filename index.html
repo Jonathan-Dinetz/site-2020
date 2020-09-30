@@ -19,6 +19,9 @@
 </head>
 
 <body>
+
+    <div id="video-trigger" class="video-trigger" ontouchstart="playVid(), changevisiblity('video-trigger');"
+        onclick="changevisiblity('video-trigger');"></div>
     <div id="mobile-menu" class="mobile-menu">
         <div class="option">WORK</div>
         <div class="option">CONTACT</div>
@@ -48,7 +51,7 @@
         <div class="top-spacer"></div>
 
         <a href="scan.html">
-            <video playsinline autoplay muted loop class="height-strict">
+            <video id="myVideo" playsinline="" autoplay="" muted="" loop="" class="height-strict">
                 <source src="images/wideboy.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -163,6 +166,15 @@
             elem.style.transition = "top 0.55s ease-in-out 0s"
             elem.style.top = 'calc(-100vh + 70px)';
         }
+
+        // to auto play //
+
+        var vid = document.getElementById("myVideo");
+
+        function playVid() {
+            vid.play();
+        }
+
 
     </script>
 </body>
