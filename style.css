@@ -31,7 +31,8 @@ body {
     height: 70px;
     background: white;
     align-items: center;
-    z-index: 55;
+    z-index: 255;
+    
    }
 
 .info-trigger{
@@ -71,9 +72,9 @@ body {
     display: flex;
     position: relative;
     left: 17px;
-    font-size: 55px;
+    font-size: 50px;
     color: black;
-    font-family: acumin-pro, sans-serif;
+    font-family: aktiv-grotesk, sans-serif;
     font-weight: 400;
     font-style: normal;
     top: 70px;
@@ -85,12 +86,22 @@ body {
     scrollbar-width: none; 
  }
 
+ .huge {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200px;
+    margin-left: 17px;
+ }
+
+
  .talkie-container::-webkit-scrollbar {
     display: none;
   }
 
  .talkie {
-    width: 70%;
+    width: 90%;
+    max-width: 1500px;
     position: relative;
     top: 50px;
     padding-bottom: 190px;
@@ -114,10 +125,11 @@ body {
     display: flex;
     position: fixed;
     left: 17px;
-    font-size: 30px;
+    font-size: 50px;
     color: black;
-    font-family: helvetica, sans-serif;
-    font-weight: 600;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .home {
@@ -129,19 +141,18 @@ body {
     background: none;
     opacity: 50%;
     align-items: center;
-    z-index: 5;
+    z-index:200;
 }
 
 .info-title{
     display: flex;
     position: fixed;
     left: 17px;
-    font-size: 30px;
+    font-size: 50px;
     color: black;
-    font-family: acumin-pro, sans-serif;
+    font-family: aktiv-grotesk, sans-serif;
     font-weight: 700;
     font-style: normal;
-    transition: color 200ms ease-in-out;
 }
 
 
@@ -158,6 +169,10 @@ body {
 
 .desktop-nav {
     margin-left: 55px;
+    font-size: 50px;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .open {
@@ -166,14 +181,14 @@ body {
     right: 17px;
     font-size: 30px;
     z-index: 20;
-    font-family: acumin-pro, sans-serif;
+    font-family: aktiv-grotesk, sans-serif;
     font-weight: 700;
     font-style: normal;
     background: none;
 }
 
 .arrow{
-    height: 35px;
+    height: 45px;
     position: relative;
     background: none;
 }
@@ -186,7 +201,11 @@ body {
 }
 
 .top-spacer{
-    height: 20vh;
+    height: 220px;
+}
+
+.bottom-spacer{
+    height: 70px;
 }
 
 .width-strict{
@@ -282,6 +301,7 @@ a {
     font-family: Helvetica, sans-serif;
     font-weight: 400;
     margin-bottom: 20px;
+    z-index: 5;
 }
 
 .option {
@@ -293,6 +313,9 @@ a {
 
 @media only screen and (max-width: 875px) {
     
+    .bottom-spacer{
+        height: 90px;
+    }
 
     .mobile {
         display: flex;
@@ -310,7 +333,8 @@ a {
     }
 
     .arrow{
-        height: 25px;
+        height: 30px;
+    
     }
 
     .top-spacer{
@@ -350,17 +374,17 @@ a {
         height: 45px;
         top: calc(100vh - 100px);
         align-items: flex-start;
-        padding-top: 20px;
+        padding-top: 12px;
        }
 
     .site-title{
         left: 10px;
-        font-size: 22px;
+        font-size: 32px;
         background: none;
     }
        .info-title{
         left: 13px;
-        font-size: 22px;
+        font-size: 32px;
     }
 
     .height-strict {
@@ -379,13 +403,13 @@ a {
 
     .talkie-container {
         left: 17px;
-        font-size: 30px;
+        font-size: 32px;
         top: 30px;
-        width: 90%;
+        width: 94%;
      }
 
      .talkie {
-         width: 90%;
+         width: 94%;
      }
 
      .desktop-nav {
