@@ -14,6 +14,15 @@ body {
  z-index: 5;
 }
 
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: normal;
+}
+
+
 .info-bar {
     display: flex;
     position: fixed;
@@ -89,6 +98,18 @@ body {
 
 
 
+.image-test {
+    display: flex;
+    width: auto;
+    min-height: 60vh;
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-image: url(images/yellow.png)
+}
+
 .site-title{
     display: flex;
     position: fixed;
@@ -96,7 +117,7 @@ body {
     font-size: 30px;
     color: black;
     font-family: helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .home {
@@ -272,6 +293,17 @@ a {
 
 @media only screen and (max-width: 875px) {
     
+
+    .mobile {
+        display: flex;
+        visibility: visible;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    
     .video-trigger {
         visibility: visible;
         opacity: 50%;
@@ -288,6 +320,7 @@ a {
     #trigger2 {
         visibility: hidden;
     }
+
     .menu-button-trigger{
         visibility: visible;
 
