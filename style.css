@@ -14,13 +14,18 @@ body {
  z-index: 5;
 }
 
-.mobile {
-    display: none;
-}
 
 .desktop {
     display: normal;
+
 }
+
+.mobile {
+    display: none;
+    position: fixed;
+    left: 101%;
+}
+
 
 
 .info-bar {
@@ -320,10 +325,13 @@ a {
     .mobile {
         display: flex;
         visibility: visible;
+        position: unset;
+
     }
 
     .desktop {
         display: none;
+        
     }
 
     
