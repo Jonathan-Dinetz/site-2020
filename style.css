@@ -173,7 +173,7 @@ body {
 }
 
 .desktop-nav {
-    margin-left: 55px;
+    margin-left: 40px;
     font-size: 50px;
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 700;
@@ -205,12 +205,31 @@ body {
     flex-direction: column;
 }
 
+.text-container {
+    display: flex;
+    width: auto;
+    margin: 10px;
+    width: 90%;
+    max-width: 1500px;
+    font-size: 50px;
+    align-content: center;
+    flex-direction: column;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .top-spacer{
     height: 220px;
 }
 
+.top-spacer-minimal {
+    height: 65px;
+
+}
+
 .bottom-spacer{
-    height: 70px;
+    height: 50px;
 }
 
 .width-strict{
@@ -318,6 +337,11 @@ a {
 
 @media only screen and (max-width: 875px) {
     
+    .text-container {
+       margin: 4px;
+        font-size: 32px;
+     
+    }
     .bottom-spacer{
         height: 90px;
     }
@@ -348,6 +372,11 @@ a {
     .top-spacer{
         height: 10vh;
     }  
+
+    .top-spacer-minimal {
+        height: 150px;
+
+    }
 
     #trigger2 {
         visibility: hidden;
