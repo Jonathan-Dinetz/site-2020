@@ -37,8 +37,9 @@ body {
     background: white;
     align-items: center;
     z-index: 255;
-    
    }
+
+  
 
 .info-trigger{
     position: fixed;
@@ -137,6 +138,8 @@ body {
     font-style: normal;
 }
 
+
+
 .home {
     display: flex;
     position: fixed;
@@ -160,6 +163,10 @@ body {
     font-style: normal;
 }
 
+.info-title:hover {
+color: grey;
+}
+
 
 .hamburger {
     display: flex;
@@ -178,6 +185,10 @@ body {
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.desktop-nav:hover {
+    color: grey;
 }
 
 .open {
@@ -322,8 +333,9 @@ a {
     justify-content: flex-end;
     flex-direction: column;
     font-size: 7vh;
-    font-family: Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     margin-bottom: 20px;
     z-index: 5;
 }
