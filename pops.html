@@ -44,14 +44,14 @@
 
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict desktop">
-            <source src="images/website.mp4" type="video/mp4">
+            <source class="lazy" src="images/website.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
 
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict mobile">
-            <source src="images/websitesmall.mp4" type="video/mp4">
+            <source class="lazy" src="images/websitesmall.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
@@ -60,22 +60,22 @@
 
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict desktop">
-            <source src="images/social media video.mp4" type="video/mp4">
+            <source class="lazy" src="images/social media video.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict mobile">
-            <source src="images/social media video small.mp4" type="video/mp4">
+            <source class="lazy" src="images/social media video small.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
-        <img class="height-strict" src="images/web materials-41.png">
+        <img class="height-strict lazy" data-src="images/web materials-41.png">
 
-        <img class="height-strict desktop" src="images/web materials-28.png">
+        <img class="height-strict desktop lazy" data-src="images/web materials-28.png">
 
-        <img class="height-strict mobile" src="images/web materials-28 small.png">
+        <img class="height-strict mobile lazy" data-src="images/web materials-28 small.png">
 
-        <img class="height-strict" src="images/web materials-25.png">
+        <img class="height-strict lazy" data-src="images/web materials-25.png">
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict">
             <source src="images/logo.mp4" type="video/mp4">
@@ -295,7 +295,37 @@
         }
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyloadImages = document.querySelectorAll("img.lazy, video.lazy");
+            var lazyloadThrottleTimeout;
 
+            function lazyload() {
+                if (lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function () {
+                    var scrollTop = window.pageYOffset;
+                    lazyloadImages.forEach(function (img) {
+                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        }
+                    });
+                    if (lazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                    }
+                }, 20);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+        });
+    </script>
 </body>
 
 </html>

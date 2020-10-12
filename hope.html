@@ -55,25 +55,25 @@
 
         <img class="height-strict" src="images/web materials-11 copy.png">
 
-        <img class="height-strict" src="images/web materials-18.png">
+        <img class="height-strict lazy" data-src="images/web materials-18.png">
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict">
-            <source src="images/sanding.mp4" type="video/mp4">
+            <source class="lazy" src="images/sanding.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
-        <img class="height-strict" src="images/web materials-41 copy.png">
+        <img class="height-strict lazy" data-src="images/web materials-41 copy.png">
 
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict desktop">
-            <source src="images/websitehardware.mp4" type="video/mp4">
+            <source class="lazy" src="images/websitehardware.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
 
 
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict mobile">
-            <source src="images/websitehardsmall.mp4" type="video/mp4">
+            <source class="lazy" src="images/websitehardsmall.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
@@ -259,7 +259,37 @@
         }
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyloadImages = document.querySelectorAll("img.lazy, video.lazy");
+            var lazyloadThrottleTimeout;
 
+            function lazyload() {
+                if (lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function () {
+                    var scrollTop = window.pageYOffset;
+                    lazyloadImages.forEach(function (img) {
+                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        }
+                    });
+                    if (lazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                    }
+                }, 20);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+        });
+    </script>
 </body>
 
 </html>
