@@ -44,11 +44,11 @@
         <img class="height-strict mobile" src="images/web materials-01 small.png">
 
         <!-- 2 -->
-        <img class="height-strict lazy" data-src="images/web materials-02.png">
+        <img class="height-strict" src="images/web materials-02.png">
 
         <!-- 3 -->
         <video playsinline="" autoplay="" muted="" loop="" class="height-strict">
-            <source src="images/suitvid.mp4" type="video/mp4">
+            <source src="images/suitvid.mp4" class="lazy" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
 
@@ -56,7 +56,6 @@
         <img class="height-strict desktop lazy" data-src="images/5suits.png">
 
         <img class="height-strict mobile lazy" data-src="images/5suitssmall.png">
-
 
         <!-- 5 -->
         <img class="height-strict lazy" data-src="images/web materials-04.png">
@@ -250,7 +249,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var lazyloadImages = document.querySelectorAll("img.lazy");
+            var lazyloadImages = document.querySelectorAll("img.lazy, video.lazy");
             var lazyloadThrottleTimeout;
 
             function lazyload() {
