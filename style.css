@@ -248,7 +248,7 @@ color: grey;
     width: 100%;
     height: auto;
     object-fit: cover;
-
+background: grey;
 
 }
 
@@ -260,6 +260,7 @@ color: grey;
     justify-content: center;
     overflow: hidden;
     margin-bottom: 15px;
+    background: grey;
 }
 
 a {
