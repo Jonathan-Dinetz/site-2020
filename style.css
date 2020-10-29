@@ -318,6 +318,7 @@ a {
     z-index: 50;
 }
 
+
 #trigger2 {
     visibility: hidden;
 }
@@ -353,8 +354,7 @@ a {
     
     .text-container {
        margin: 4px;
-        font-size: 32px;
-     
+       font-size: 32px;
     }
     .bottom-spacer{
         height: 90px;
@@ -364,6 +364,7 @@ a {
         display: flex;
         visibility: visible;
         position: unset;
+        left:0;
     }
 
     .desktop {
