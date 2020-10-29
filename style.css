@@ -14,7 +14,19 @@ body {
  z-index: 5;
 }
 
+.parasite {
+    position: relative;
+    top:0;
+    left: 0;
+    z-index: 200;
+    height: 300px;
+    width: 300px;
+    background: red;
+}
 
+#hover:hover {
+    color: grey;
+}
 .desktop {
     display: normal;
 
@@ -166,6 +178,7 @@ body {
 .info-title:hover {
 color: grey;
 }
+
 
 
 .hamburger {

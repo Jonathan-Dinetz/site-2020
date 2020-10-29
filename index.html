@@ -19,12 +19,11 @@
         <div class="option"><a href="about.html">ABOUT</a></div>
     </div>
     <div class="nav-bar">
-        <a href="index.html" class="home"></a>
-        <div class="site-title">J. DINETZ</div>
+        <div class="site-title"> <a id="hover" href="index.html">J. DINETZ</a></div>
         <div class="hamburger">
-            <div class="desktop-nav"><a href="index.html">WORK</a></div>
-            <div class="desktop-nav"><a href="contact.html">CONTACT</a></div>
-            <div class="desktop-nav"><a href="about.html">ABOUT</a></div>
+            <div class="desktop-nav"><a id="hover" href="index.html">WORK</a></div>
+            <div class="desktop-nav"><a id="hover" href="contact.html">CONTACT</a></div>
+            <div class="desktop-nav"><a id="hover" href="about.html">ABOUT</a></div>
             <div id="top" class="menu-button-top"></div>
             <div id="bottom" class="menu-button-bottom"></div>
             <div id="trigger1" class="menu-button-trigger"
@@ -43,33 +42,33 @@
 
         <!-- suit -->
         <a href="scan.html">
-            <div class="desktop" style="padding:48.07% 0 0 0;position:relative;margin-bottom: 15px;"><iframe
+            <div href="scan.html" class="desktop"
+                style="padding:48.07% 0 0 0;position:relative;margin-bottom: 15px; background-color: none;">
+                <iframe
                     src="https://player.vimeo.com/video/473514664?autoplay=1&loop=1&title=0&portrait=0&muted=1&background=1"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;z-index: -90;" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen></iframe></div>
         </a>
 
         <a href="scan.html">
             <div class="mobile" style="padding:174.44% 0 0 0;position:relative; margin-bottom: 10px;"><iframe
                     src="https://player.vimeo.com/video/473514715?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&background=1"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;z-index: -90;" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen></iframe></div>
         </a>
-
-
 
         <!-- hardware -->
         <a href="hope.html">
             <div class="desktop" style="padding:48.17% 0 0 0;position:relative;margin-bottom: 15px;"><iframe
                     src="https://player.vimeo.com/video/473527676?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&background=1"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;z-index: -90;" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen></iframe></div>
         </a>
 
         <a href="hope.html">
             <div class="mobile" style="padding:83.72% 0 0 0;position:relative;margin-bottom: 10px;"><iframe
                     src="https://player.vimeo.com/video/473527622?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&background=1"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;z-index: -90;" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen></iframe></div>
         </a>
 
@@ -88,15 +87,21 @@
         </a> -->
 
         <a href="pops.html">
-            <div class="desktop height-strict" style="padding:48.07% 0 0 0;position:relative;"><iframe
+            <div class="desktop" style="padding:48.07% 0 0 0;position:relative; margin-bottom: 15px">
+                <iframe
                     src="https://player.vimeo.com/video/473541296?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&background=1"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;margin-bottom: 15px;
-                    " frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;z-index: -90;" frameborder="0"
+                    allow="autoplay; fullscreen" allowfullscreen></iframe></div>
             <script src="https://player.vimeo.com/api/player.js"></script>
         </a>
 
         <a href="pops.html">
-            <img class="height-strict mobile lazy" data-src="images/popssmall.png">
+            <div class="mobile" style="padding:69.5% 0 0 0;position:relative; margin-bottom: 10px;">
+                <iframe
+                    src="https://player.vimeo.com/video/473541213?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&background=1"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;z-index: -90;" frameborder="0"
+                    allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
         </a>
 
         <!-- lightboard -->
@@ -104,7 +109,7 @@
         <a href="lightboard.html">
             <div class="desktop" style="padding:48.07% 0 0 0;position:relative;"><iframe
                     src="https://player.vimeo.com/video/473513695?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1&background=1"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%; z-index: -90;" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen></iframe></div>
         </a>
 
@@ -116,136 +121,10 @@
             </video>
         </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
-    <script>
-        function changeangle(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.1s ease-in-out 0s"
-            elem.style.transform = 'rotateZ(45deg)';
-        }
+    <script src="script.mjs"></script>
 
-        function changeangleback(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.1s ease-in-out 0s"
-            elem.style.transform = 'rotateZ(0)';
-        }
-
-        function changeloc(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.25s ease-in-out 0s"
-            elem.style.top = '31px';
-        }
-
-        function changelocback(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.25s ease-in-out 1s"
-            elem.style.top = '27px';
-        }
-
-        function changeangletwo(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.1s ease-in-out 0s"
-            elem.style.transform = 'rotateZ(-45deg)';
-        }
-
-        function changeangletwoback(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.1s ease-in-out 0s"
-            elem.style.transform = 'rotateZ(0)';
-        }
-
-
-        function changeloctwo(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.25s ease-in-out 0s"
-            elem.style.top = '31px';
-        }
-
-        function changeloctwoback(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "transform 0.25s ease-in-out 1s"
-            elem.style.top = '35px';
-        }
-
-        function changevisiblity(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "visibility 0.25s ease-in-out 0s"
-            elem.style.visibility = 'hidden';
-        }
-
-        function changevisiblitytwo(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "visibility 0.25s ease-in-out 0s"
-            elem.style.visibility = 'visible';
-        }
-
-        function bringitondown(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "top 0.55s ease-in-out 0s"
-            elem.style.top = '0px';
-        }
-
-        function bringitonup(el) {
-            var elem = document.getElementById(el);
-            elem.style.transition = "top 0.55s ease-in-out 0s"
-            elem.style.top = 'calc(-100vh + 70px)';
-        }
-
-        // to auto play //
-
-        var vid = document.getElementById("myVideo");
-
-        function playVid() {
-            vid.play();
-        }
-
-
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var lazyloadImages = document.querySelectorAll("img.lazy, video.lazy");
-            var lazyloadThrottleTimeout;
-
-            function lazyload() {
-                if (lazyloadThrottleTimeout) {
-                    clearTimeout(lazyloadThrottleTimeout);
-                }
-
-                lazyloadThrottleTimeout = setTimeout(function () {
-                    var scrollTop = window.pageYOffset;
-                    lazyloadImages.forEach(function (img) {
-                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                        }
-                    });
-                    if (lazyloadImages.length == 0) {
-                        document.removeEventListener("scroll", lazyload);
-                        window.removeEventListener("resize", lazyload);
-                        window.removeEventListener("orientationChange", lazyload);
-                    }
-                }, 20);
-            }
-
-            document.addEventListener("scroll", lazyload);
-            window.addEventListener("resize", lazyload);
-            window.addEventListener("orientationChange", lazyload);
-        });
-    </script>
     <script src="https://player.vimeo.com/api/player.js"></script>
 
 </body>
