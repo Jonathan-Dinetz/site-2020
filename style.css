@@ -364,6 +364,10 @@ a {
 
 
 @media only screen and (max-width: 925px) {
+
+    #hover:hover {
+        color: black;
+    }
     
     .text-container {
        margin: 4px;
@@ -444,6 +448,7 @@ a {
         left: 10px;
         font-size: 32px;
         background: none;
+        z-index: 400;
     }
        .info-title{
         left: 13px;
