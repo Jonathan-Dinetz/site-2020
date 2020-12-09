@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://use.typekit.net/vbu2ynd.css">
+</head>
+
+<body>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="option"><a href="index.html">Work</a></div>
+        <div class="option"><a href="contact.html">CONTACT</a></div>
+        <div class="option"><a href="about.html">ABOUT</a></div>
+    </div>
+    <div class="nav-bar">
+        <div class="site-title"> <a id="hover" href="index.html">J. DINETZ</a></div>
+        <div class="hamburger">
+            <div class="desktop-nav"><a id="hover" href="index.html">WORK</a></div>
+            <div class="desktop-nav"><a id="hover" href="contact.html">CONTACT</a></div>
+            <div class="desktop-nav"><a id="hover" href="about.html">ABOUT</a></div>
+            <div id="top" class="menu-button-top"></div>
+            <div id="bottom" class="menu-button-bottom"></div>
+            <div id="trigger1" class="menu-button-trigger"
+                onclick=" changeloc('top'),  changeloctwo('bottom'), changeangle('top'), changeangletwo('bottom'), changevisiblity('trigger1'), changevisiblitytwo('trigger2'), bringitondown('mobile-menu');">
+            </div>
+
+            <div id="trigger2" class="menu-button-trigger"
+                onclick="changelocback('top'),  changeloctwoback('bottom'), changeangleback('top'), changeangletwoback('bottom'), changevisiblitytwo('trigger1'), changevisiblity('trigger2'), bringitonup('mobile-menu');">
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="top-spacer"></div>
+
+        <img class="height-strict lazy" data-src="images/box.jpg">
+
+        <img class="height-strict" src="images/cover.jpg">
+
+        <img class="height-strict" src="images/boxdeatil.jpg">
+
+
+        <img class="height-strict lazy" data-src="images/flip.jpg">
+
+        <img class="height-strict lazy" data-src="images/spread2.png">
+
+
+
+        <div class="bottom-spacer"></div>
+
+    </div>
+
+    </div>
+    <div id="container" class="info-bar">
+        <div id="info-trigger"
+            onclick="changepos('container'), changepos('container2'), changevisiblity('info-trigger'), changevisiblitytwo('info-trigger2'), transformopen('open'), opacityup('talkie');"
+            onmouseover="greyedout('info-title');" onmouseout="greyedin('info-title');" class="info-trigger"></div>
+        <div id="info-trigger2"
+            onclick="changeposback('container'), changeposback('container2'), changevisiblity('info-trigger2'), changevisiblitytwo('info-trigger'), transformopenback('open'), opacitydown('talkie');"
+            onmouseover="greyedout('info-title');" onmouseout="greyedin('info-title');" class="info-trigger">
+        </div>
+        <div id="info-title" class="info-title">PROJECT INFO</div>
+        <div id="open" class="open"><img class="arrow" src="images/arrow-02.svg"></div>
+
+    </div>
+    <div id="container2" class="info-block">
+        <div class="talkie-container">
+            <div id="talkie" class="talkie">Overview
+                <br><br>
+
+                The delivery box for an oscar nominated film, the Duke of Burgundy. The film surrounds a lesbian
+                couple's role playing drama.<br>&nbsp
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.mjs"></script>
+
+</body>
+
+</html>
