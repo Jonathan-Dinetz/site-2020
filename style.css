@@ -277,6 +277,10 @@ background: grey;
     background-color: #D4D4D4;
 }
 
+.height-strict-for-vid {
+    height: 15px;
+}
+
 a {
     text-decoration: none;
     color: black;
