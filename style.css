@@ -464,6 +464,10 @@ a {
         margin-bottom: 10px;
     }
 
+    .height-strict-for-vid {
+        height: 10px;
+    }
+
     .hamburger {
         right: 15px;
         font-size: 22px;
