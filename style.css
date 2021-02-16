@@ -90,10 +90,11 @@ body {
  .talkie-container {
     display: flex;
     position: relative;
-    left: 17px;
-    font-size: 50px;
+    left: 27px;
+    font-size: 35px;
+    column-count: 2;
     color: black;
-    font-family: aktiv-grotesk, sans-serif;
+    font-family: franklin-gothic-urw, sans-serif;
     font-weight: 400;
     font-style: normal;
     top: 70px;
@@ -106,10 +107,10 @@ body {
  }
 
  .huge {
-    font-family: aktiv-grotesk, sans-serif;
+    font-family: franklin-gothic-urw, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 200px;
+    font-size: 35px;
     margin-left: 17px;
  }
 
@@ -119,9 +120,11 @@ body {
   }
 
  .talkie {
-    width: 90%;
+    width: 94%;
     max-width: 1500px;
     position: relative;
+    column-count: 2;
+    column-gap: 40px;
     top: 50px;
     padding-bottom: 190px;
  }
@@ -143,11 +146,11 @@ body {
 .site-title{
     display: flex;
     position: fixed;
-    left: 17px;
-    font-size: 50px;
+    left: 27px;
+    font-size: 35px;
     color: black;
-    font-family: aktiv-grotesk, sans-serif;
-    font-weight: 700;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -168,11 +171,11 @@ body {
 .info-title{
     display: flex;
     position: fixed;
-    left: 17px;
-    font-size: 50px;
+    left: 27px;
+    font-size: 35px;
     color: black;
-    font-family: aktiv-grotesk, sans-serif;
-    font-weight: 700;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -185,19 +188,19 @@ color: grey;
 .hamburger {
     display: flex;
     position: fixed;
-    right: 17px;
+    right: 27px;
     font-size: 30px;
     z-index: 20;
-    font-family: acumin-pro, sans-serif;
-    font-weight: 700;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
 .desktop-nav {
-    margin-left: 40px;
-    font-size: 50px;
-    font-family: aktiv-grotesk, sans-serif;
-    font-weight: 700;
+    margin-left: 100px;
+    font-size: 35px;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -208,17 +211,17 @@ color: grey;
 .open {
     display: flex;
     position: fixed;
-    right: 17px;
-    font-size: 30px;
+    right: 25px;
+    font-size: 35px;
     z-index: 20;
-    font-family: aktiv-grotesk, sans-serif;
-    font-weight: 700;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
     font-style: normal;
     background: none;
 }
 
 .arrow{
-    height: 45px;
+    height: 36px;
     position: relative;
     background: none;
 }
@@ -226,20 +229,20 @@ color: grey;
 .image-container {
     display: flex;
     width: auto;
-    margin: 15px;
+    margin: 25px;
     flex-direction: column;
 }
 
 .text-container {
     display: flex;
     width: auto;
-    margin: 10px;
+    margin: 27px;
     width: 90%;
     max-width: 1500px;
-    font-size: 50px;
+    font-size: 35px;
     align-content: center;
     flex-direction: column;
-    font-family: aktiv-grotesk, sans-serif;
+    font-family: franklin-gothic-urw, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -273,12 +276,12 @@ background: grey;
     width: 100%;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     background-color: #D4D4D4;
 }
 
 .height-strict-for-vid {
-    height: 15px;
+    height: 25px;
 }
 
 a {
@@ -296,13 +299,13 @@ a {
 
 .menu-button-top {
     visibility: hidden;
-
     display: flex;
     position: fixed;
     top: 27px;
     right: 20px;
     width: 25px;
     border-top: solid;
+    border-width: 2.2px;
     transition: transform 1s;
 
 }
@@ -319,6 +322,7 @@ a {
     right: 20px;
     width: 25px;
     border-top: solid;
+    border-width: 2.2px;
     transition: transform 1s;
 }
 
@@ -353,19 +357,26 @@ a {
     justify-content: flex-end;
     flex-direction: column;
     font-size: 7.75vh;
-    font-family: aktiv-grotesk, sans-serif;
-    font-weight: 500;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
     font-style: normal;
     margin-bottom: 20px;
     z-index: 5;
 }
 
 .option {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     margin-top: -25px;
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
+
+@media only screen and (max-width: 1125px) {
+
+    .talkie {
+        width: 94%;
+        column-count: 1;
+    }
 
 
 @media only screen and (max-width: 925px) {
@@ -375,8 +386,8 @@ a {
     }
     
     .text-container {
-       margin: 4px;
-       font-size: 32px;
+       margin: 20px;
+       font-size: 25px;
     }
     .bottom-spacer{
         height: 90px;
@@ -400,7 +411,7 @@ a {
     }
 
     .arrow{
-        height: 30px;
+        height: 27px;
     
     }
 
@@ -450,14 +461,14 @@ a {
        }
 
     .site-title{
-        left: 10px;
-        font-size: 32px;
+        left: 20px;
+        font-size: 25px;
         background: none;
         z-index: 400;
     }
        .info-title{
         left: 13px;
-        font-size: 32px;
+        font-size: 25px;
     }
 
     .height-strict {
@@ -480,13 +491,14 @@ a {
 
     .talkie-container {
         left: 17px;
-        font-size: 32px;
+        font-size: 25px;
         top: 30px;
         width: 94%;
      }
 
      .talkie {
          width: 94%;
+         column-count: 1;
      }
 
      .desktop-nav {
